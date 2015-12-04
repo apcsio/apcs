@@ -8,6 +8,8 @@ We would love to hear how you are using APCS graphics. Email [operations@techlab
 
 All graphics functionality is abstracted to static methods, so there are no mysterious classes to extend or rigid class hierarchies to conform to. You can quickly visualize a [simulation of a bouncing ball](https://techlab.education/java/physics) or recreate the viral game [Flappy Bird](https://techlab.education/java/flappy-bird). You can bridge the gap between procedural programming and object-oriented programming by [simulating bouncing balls](https://techlab.education/java/bouncing-balls) or [catching falling objects](https://techlab.education/java/catching).
 
+![](https://raw.githubusercontent.com/apcsio/apcs/master/image/physics.gif)
+
 ```java
 // A bouncing ball simulation
 int x = 50, y = 50, dy = 0;
