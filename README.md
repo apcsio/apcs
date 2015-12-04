@@ -84,12 +84,11 @@ Window.out.background(red, green, blue)
 
 Animations are created by showing still images called **frames** in rapid succession. The easiest way to create animations in the window is to endlessly loop a block of instructions that draws a single frame. Since the instructions are usually performed relatively fast by the computer, we need to insert a small pause between each repetition to give our brains enough time to process the frame.
 
-The easiest way to insert that pause is with the `Window.frame` method.
-
-> Using `Window.frame` is the recommended way to animate with APCS graphics, as it eliminates the flickering effect caused by partially-rendered frames.
+The easiest way to insert that pause is with the `Window.frame` method, which can optionally take in the number of milliseconds to wait for. The default delay between frames is `33` milliseconds, to achieve a **frame rate** of around 30 frames per second (**fps**).
 
 ```java
 Window.frame()
+Window.frame(milliseconds)
 ```
 
 ### Waiting
@@ -112,4 +111,58 @@ while (true) {
 }
 ```
 
+### Frame rate
 
+You can set the **frame rate** (the number of frames displayed each second) with the `Window.setFrameRate` method. Setting the frame rate will automatically calculate the number of milliseconds to wait when `Window.frame` is called with no arguments.
+
+```java
+Window.setFrameRate(rate)
+```
+
+## Mouse input
+
+The methods for getting input from the mouse are organized under the `Window.mouse` class.
+
+### Mouse position
+
+`Window.mouse.getX` and `Window.mouse.getY` return the x and y position of the mouse, respectively.
+
+```java
+Window.mouse.getX()
+Window.mouse.getY()
+```
+
+### Mouse click
+
+`Window.mouse.clicked` returns `true` if the mouse is clicked, and `false` otherwise.
+
+```java
+Window.mouse.clicked()
+```
+
+## Keyboard input
+
+The methods for getting keyboard input are organized under the `Window.key` class.
+
+### Key pressed
+
+```java
+Window.key.pressed()
+Window.key.pressed( char )
+Window.key.pressed( string )
+```
+
+### Key released
+
+```java
+Window.key.released()
+Window.key.released( char )
+Window.key.released( string )
+```
+
+### Key typed
+
+```java
+Window.key.typed( char )
+Window.key.typed( string )
+```
