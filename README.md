@@ -1,10 +1,12 @@
 # APCS graphics
 
-A lightweight graphics library originally designed for high school students taking AP Computer Science. It makes Java game development significantly easier, and is actively maintained by [Techlab Education](https://techlab.education/java). There is a [getting started guide](https://techlab.education/java/start) to help you get Java, Eclipse (a popular IDE), and APCS graphics set up on your computer. 
+A lightweight graphics library originally designed for high school students taking AP Computer Science. It makes Java game development significantly easier, and is actively maintained by [Techlab Education](https://techlab.education/java). There is a [getting started guide](https://techlab.education/java/start) to help you get Java, Eclipse (a popular IDE), and APCS graphics set up on your computer. You can also [read the curriculum](https://techlab.education/java) that we use in teaching with APCS graphics.
 
 ## Creating a window
 
 The `Window.size` method creates a window of the given height.
+
+![](http://apcs.io/img/visual/method-inputs.png)
 
 ```java
 Window.size(width, height)
