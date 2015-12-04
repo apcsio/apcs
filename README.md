@@ -1,10 +1,40 @@
 # APCS graphics
 
-A lightweight open-source graphics library originally designed for high school students taking AP Computer Science. It makes Java game development accessible to students who are programming for the first time, and is actively maintained by [Techlab Education](https://techlab.education/java). There is a [getting started guide](https://techlab.education/java/start) to help you get Java, Eclipse (a popular IDE), and APCS graphics set up on your computer. You can also [read the curriculum](https://techlab.education/java) that we use in teaching with APCS graphics.
+A lightweight open-source graphics library originally designed for high school students taking AP Computer Science. It makes Java game development accessible to students who are programming for the first time, and is actively maintained by [Techlab Education](https://techlab.education). There is a [getting started guide](https://techlab.education/java/start) to help you get Java, Eclipse (a popular IDE), and APCS graphics set up on your computer. You can also [read the curriculum](https://techlab.education/java) that we use for teaching with APCS graphics.
+
+We would love to hear how you are using APCS graphics. Email [operations@techlabeducation.com](mailto:operations@techlabeducation.com) to start a conversation!
 
 ## Philosophy
 
-The APCS library is designed to make it easy for anyone to use code to draw and animate. No object-oriented programming knowledge is required to get started - all graphics functionality is abstracted to static methods. There are no mysterious classes to extend or rigid class hierarchies to conform to. You can quickly visualize a [simulation of a bouncing ball](https://techlab.education/java/physics) or recreate the viral game [Flappy Bird](https://techlab.education/java/flappy-bird). You can bridge the gap between procedural programming and object-oriented programming by [simulating bouncing balls](https://techlab.education/java/bouncing-balls) or [catching falling objects](https://techlab.education/java/catching).
+All graphics functionality is abstracted to static methods, so there are no mysterious classes to extend or rigid class hierarchies to conform to. You can quickly visualize a [simulation of a bouncing ball](https://techlab.education/java/physics) or recreate the viral game [Flappy Bird](https://techlab.education/java/flappy-bird). You can bridge the gap between procedural programming and object-oriented programming by [simulating bouncing balls](https://techlab.education/java/bouncing-balls) or [catching falling objects](https://techlab.education/java/catching).
+
+```java
+// A bouncing ball simulation
+int x = 50, y = 50, dy = 0;
+
+while (true) {
+    Window.out.background("white");
+
+    // Draw the ball.
+    Window.out.color("red");
+    Window.out.circle(x, y, 20);
+
+    // Move the ball.
+    x = x + 5;
+    y = y + dy;
+    dy = dy + 1;
+
+    // Bounce the ball if it hits the ground.
+    if (y > 480) {
+        y = 480;
+        dy = dy * -9 / 10;
+    }
+
+    // Complete a frame of the animation.
+    Window.frame();
+}
+
+```
 
 ## Creating a window
 
@@ -18,7 +48,7 @@ Calling `Window.size` is optional - performing any other drawing command will au
 
 ## Drawing
 
-The APCS library has methods for drawing common shapes like circles, rectangles, ovals, squares, lines, polygons, and text. These methods are organized under the `Window.out` class. 
+The APCS library has methods for drawing common shapes like circles, rectangles, ovals, squares, lines, polygons, and text. These methods are organized under the `Window.out` class.
 
 > Calling any `Window.out` method will open the output window.
 
