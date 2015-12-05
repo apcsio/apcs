@@ -1,14 +1,14 @@
 # APCS graphics
 
-A lightweight open-source graphics library originally designed for high school students taking AP Computer Science. It makes Java game development accessible to students who are programming for the first time, and is actively maintained by [Techlab Education](https://techlab.education). There is a [getting started guide](https://techlab.education/java/start) to help you get Java, Eclipse (a popular IDE), and APCS graphics set up on your computer. You can also [read the curriculum](https://techlab.education/java) that we use for teaching with APCS graphics.
+A lightweight open-source graphics library created by a [Java instructor](http://keshav.is/building/apcs) for high school students taking AP Computer Science. It makes Java game development accessible to students who are programming for the first time, and is actively maintained by [Techlab Education](https://techlab.education). There is a [getting started guide](https://techlab.education/java/start) to help you get Java, Eclipse (a popular IDE), and APCS graphics set up on your computer. You can also [read the curriculum](https://techlab.education/java) that we use for teaching with APCS graphics.
 
 We would love to hear how you are using APCS graphics. Email [operations@techlabeducation.com](mailto:operations@techlabeducation.com) to start a conversation!
 
 ## Philosophy
 
-All graphics functionality is abstracted to static methods, so there are no mysterious classes to extend or rigid class hierarchies to conform to. You can quickly visualize a [simulation of a bouncing ball](https://techlab.education/java/physics) or recreate the viral game [Flappy Bird](https://techlab.education/java/flappy-bird). You can bridge the gap between procedural programming and object-oriented programming by [simulating bouncing balls](https://techlab.education/java/bouncing-balls) or [catching falling objects](https://techlab.education/java/catching).
+All graphics functionality is abstracted to static methods, so there are no mysterious classes to extend or rigid class hierarchies to conform to. You can quickly visualize a [simulation of a bouncing ball](https://techlab.education/java/physics), recreate the viral game [Flappy Bird](https://techlab.education/java/flappy-bird), or build a multiplayer [agar.io clone](https://techlab.education/blog/agar).
 
-![](https://raw.githubusercontent.com/apcsio/apcs/master/image/physics.gif)
+![](https://raw.githubusercontent.com/apcsio/apcsio.github.io/master/image/physics.gif)
 
 ```java
 // A bouncing ball simulation
@@ -76,6 +76,8 @@ Window.addColor(colorName, red, green, blue)
 ```java
 Window.out.circle(x, y, radius)
 ```
+
+![](https://raw.githubusercontent.com/apcsio/apcsio.github.io/master/image/multi-ball.gif)
 
 ### Draw a square
 
