@@ -142,6 +142,10 @@ Window.out.square(x, y, length)
 Window.out.rectangle(x, y, width, height)
 ```
 
+![](https://raw.githubusercontent.com/apcsio/apcsio.github.io/master/image/flappybird.gif)
+
+> One of the first challenges in the [Flappy Bird lab](https://techlab.education/java/flappy-bird) is calculating the positions and sizes of the pipe rectangles.
+
 ### Draw an oval
 
 `Window.out.oval` draws an oval centered at the position (`x`, `y`) with the given `width` and `height`.
@@ -149,6 +153,18 @@ Window.out.rectangle(x, y, width, height)
 ```java
 Window.out.oval(x, y, width, height)
 ```
+
+### Draw a line
+
+`Window.out.line` draws a line between the starting position (`x1`, `y1`) and the ending position (`x2`, `y2`).
+
+```java
+Window.out.line(x1, y1, x2, y2)
+```
+
+### Draw an image
+
+`Window.out.image` draws an image with the given (`x`, `y`) coordinate at the top left corner.
 
 ### Background
 
@@ -159,6 +175,36 @@ Sets the background of the window to the color either specified by its string na
 ```java
 Window.out.background(colorName)
 Window.out.background(red, green, blue)
+```
+
+![](https://raw.githubusercontent.com/apcsio/apcsio.github.io/master/image/single-ball.gif)
+
+```java
+int x = 250, y = 250,
+    dx = 4, dy = 3;
+
+while (true) {
+    // Draw the background first.
+    Window.out.background("white");
+
+    // Change the color to the ball's color, then draw it.
+    Window.out.color("red");
+    Window.out.circle(x, y, 10);
+
+    // Move the ball.
+    x = x + dx;
+    y = y + dy;
+
+    // Check for collisions.
+    if (x > 490) { ... }
+    if (x < 10) { ... }
+    if (y > 490) { ... }
+    if (y < 10) { ... }
+
+    // Draw one frame.
+    Window.frame();
+}
+
 ```
 
 ## Animating
