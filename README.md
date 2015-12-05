@@ -52,7 +52,9 @@ Calling `Window.size` is optional - performing any other drawing command will au
 
 The APCS library has methods for drawing common shapes like circles, rectangles, ovals, squares, lines, polygons, and text. These methods are organized under the `Window.out` class.
 
-> Calling any `Window.out` method will open the output window.
+![](https://raw.githubusercontent.com/apcsio/apcsio.github.io/master/image/window-drawing.png)
+
+> Calling any `Window.out` method will open the output window if it is not yet open.
 
 ### Set the color
 
@@ -154,6 +156,10 @@ Window.out.rectangle(x, y, width, height)
 Window.out.oval(x, y, width, height)
 ```
 
+![](https://raw.githubusercontent.com/apcsio/apcsio.github.io/master/image/flappy-basic.gif)
+
+> We start the [Flappy Bird lab](https://techlab.education/java/flappy-bird) by drawing a simple oval to represent the bird, and first implementing the physics behind the bird's motion.
+
 ### Draw a line
 
 `Window.out.line` draws a line between the starting position (`x1`, `y1`) and the ending position (`x2`, `y2`).
@@ -165,6 +171,10 @@ Window.out.line(x1, y1, x2, y2)
 ### Draw an image
 
 `Window.out.image` draws an image with the given (`x`, `y`) coordinate at the top left corner.
+
+```java
+Window.out.line(x1, y1, x2, y2)
+```
 
 ### Background
 
@@ -209,7 +219,9 @@ while (true) {
 
 ## Animating
 
-Animations are created by showing still images called **frames** in rapid succession. The easiest way to create animations in the window is to endlessly loop a block of instructions that draws a single frame. Since the instructions are usually performed relatively fast by the computer, we need to insert a small pause between each repetition to give our brains enough time to process the frame.
+Animations are created by showing still images called **frames** in rapid succession. The movies you see in a theater have 24 **frames per second** - that is, every second your brain is seeing twenty-four slightly different images, and stitching them together to give the illusion of motion.
+
+The easiest way to create animations with code is to endlessly loop a block of instructions that draws a single frame. Your computer can perform drawing instructions in less than a millisecond, so we need to insert a small pause between each repetition to give our brains enough time to process the frame.
 
 The easiest way to insert that pause is with the `Window.frame` method, which can optionally take in the number of milliseconds to wait for. The default delay between frames is `33` milliseconds, to achieve a **frame rate** of around 30 frames per second (**fps**).
 
@@ -258,6 +270,8 @@ The methods for getting input from the mouse are organized under the `Window.mou
 Window.mouse.getX()
 Window.mouse.getY()
 ```
+
+![](https://raw.githubusercontent.com/apcsio/apcsio.github.io/master/image/window-mouse.png)
 
 ### Mouse click
 
