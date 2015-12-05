@@ -118,7 +118,13 @@ Window.out.square(x, y, length)
 
 ![](https://raw.githubusercontent.com/apcsio/apcsio.github.io/master/image/gameoflife.gif)
 
-> Conway's game of life is a simulation devised by the mathematician John Horton Conway, where a universe of cells lives and dies according to a simple set of rules.
+> Conway's game of life is a simulation devised by the mathematician John Horton Conway, where a universe of cells lives and dies according to a simple set of rules:
+
+> **The Underpopulation Rule**: A living cell with fewer than two live neighbors dies.
+> **The Survival Rule**: A living cell with two or three live neighbors survives to the next generation.
+> **The Overpopulation Rule**: A living cell with more than three neighbors dies.
+> **The Reproduction Rule**: A dead cell with exactly 3 neighbors comes to life in the next generation.
+
 > - [Conway's Game of Life lab](https://techlab.education/lab/game-of-life)
 
 ### Draw a rectangle
