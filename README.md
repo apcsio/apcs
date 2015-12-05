@@ -69,6 +69,10 @@ The 500 most popular colors are included in the window library - to add addition
 Window.addColor(colorName, red, green, blue)
 ```
 
+![](https://raw.githubusercontent.com/apcsio/apcsio.github.io/master/image/colors.gif)
+
+> In the [control flow lab](https://techlab.education/java/control-flow), students use mouse clicks and bounding boxes to select the color in an interactive drawing application.
+
 ### Draw a circle
 
 `Window.out.circle` draws a circle centered at the position (`x`, `y`) with the given `radius`.
