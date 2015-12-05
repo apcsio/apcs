@@ -80,6 +80,7 @@ Window.out.circle(x, y, radius)
 ![](https://raw.githubusercontent.com/apcsio/apcsio.github.io/master/image/multi-ball.gif)
 
 ```java
+// A class to describe a single ball.
 public class Ball {
     int x, y, dx, dy;
 
@@ -88,27 +89,22 @@ public class Ball {
     public void move() { ... }
 }
 
-public class BallSimulation {
-    public static void main(String[] args) {
+// Create a list of Ball objects.
+Ball[] list = new Ball[100];
+for (int i = 0 ; i < 100 ; i++) {
+    list[i] = new Ball();
+}
 
-        // Create a list of Ball objects
-        Ball[] list = new Ball[100];
-        for (int i = 0 ; i < 100 ; i++) {
-            list[i] = new Ball();
-        }
+while (true) {
+    Window.out.background("white");
 
-        // Draw and move each ball forever
-        while (true) {
-            Window.out.background("white");
-
-            for (Ball b : list) {
-                b.draw();
-                b.move();
-            }
-
-            Window.frame();
-        }
+    // Draw and move each ball.
+    for (Ball b : list) {
+        b.draw();
+        b.move();
     }
+
+    Window.frame();
 }
 ```
 
@@ -119,6 +115,11 @@ public class BallSimulation {
 ```java
 Window.out.square(x, y, length)
 ```
+
+![](https://raw.githubusercontent.com/apcsio/apcsio.github.io/master/image/gameoflife.gif)
+
+> Conway's game of life is a simulation devised by the mathematician John Horton Conway, where a universe of cells lives and dies according to a simple set of rules.
+> - [Conway's Game of Life lab](https://techlab.education/lab/game-of-life)
 
 ### Draw a rectangle
 
