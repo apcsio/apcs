@@ -79,6 +79,39 @@ Window.out.circle(x, y, radius)
 
 ![](https://raw.githubusercontent.com/apcsio/apcsio.github.io/master/image/multi-ball.gif)
 
+```java
+public class Ball {
+    int x, y, dx, dy;
+
+    public Ball() { ... }
+    public void draw() { ... }
+    public void move() { ... }
+}
+
+public class BallSimulation {
+    public static void main(String[] args) {
+
+        // Create a list of Ball objects
+        Ball[] list = new Ball[100];
+        for (int i = 0 ; i < 100 ; i++) {
+            list[i] = new Ball();
+        }
+
+        // Draw and move each ball forever
+        while (true) {
+            Window.out.background("white");
+
+            for (Ball b : list) {
+                b.draw();
+                b.move();
+            }
+
+            Window.frame();
+        }
+    }
+}
+```
+
 ### Draw a square
 
 `Window.out.square` draws a square centered at the position (`x`, `y`) with the given side `length`.
