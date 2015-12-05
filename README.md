@@ -178,9 +178,7 @@ Window.out.line(x1, y1, x2, y2)
 
 ### Background
 
-Sets the background of the window to the color either specified by its string name or its RGB value.
-
-> Setting the background to a given color will change the current drawing color to that color.
+`Window.out.background` sets the background of the window to the color specified by the string name or RGB value. **This method erases everything that has been drawn on the window and replaces it with the given color.** Setting the background will also change the current drawing color to that color.
 
 ```java
 Window.out.background(colorName)
