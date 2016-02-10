@@ -134,7 +134,7 @@ Window.out.square(x, y, length)
 
 > **The Reproduction Rule**: A dead cell with exactly 3 neighbors comes to life in the next generation.
 
-> - [Conway's Game of Life lab](https://techlab.education/lab/game-of-life)
+> - [Conway's Game of Life lab](https://techlab.education/java/game-of-life)
 
 ### Draw a rectangle
 
