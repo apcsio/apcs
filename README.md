@@ -6,7 +6,7 @@ We would love to hear how you are using APCS graphics. Email [operations@techlab
 
 ## Philosophy
 
-All graphics functionality is abstracted to static methods, so there are no mysterious classes to extend or rigid class hierarchies to conform to. You can quickly visualize a [simulation of a bouncing ball](https://techlab.education/java/physics), recreate the viral game [Flappy Bird](https://techlab.education/java/flappy-bird), or build a multiplayer [agar.io clone](https://techlab.education/blog/agar).
+All graphics functionality is abstracted to static methods, so there are no mysterious classes to extend or rigid class hierarchies to conform to. You can quickly visualize a [simulation of a bouncing ball](https://techlab.education/java/physics), recreate the viral game [Flappy Bird](https://techlab.education/java/flappy-bird), or build a [clone of agar.io](https://github.com/techlabeducation/apcs).
 
 ![](https://raw.githubusercontent.com/apcsio/apcsio.github.io/master/image/physics.gif)
 
