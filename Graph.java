@@ -114,7 +114,6 @@ public class Graph {
 					g.setColor(Color.black);
 					g.drawLine((int) (padding.x * scale.x), 0, 
 							   (int) (padding.x * scale.x), height);
-					System.out.println(padding.y);
 					g.drawLine(0, (int) (height - padding.y * scale.y), 
 							   width, (int) (height - padding.y * scale.y));
 				}
