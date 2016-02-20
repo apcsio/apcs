@@ -89,9 +89,14 @@ public class Graph {
 					if (drawAxisLabels) {
 						g.setColor(Color.lightGray);
 						g.setFont(new Font("Arial", 10, labelSize));
+						boolean lyprecise = (labelSize * labelFrequency) < scale.y * 2;
 						for (int ly = height - ((int) (padding.y * scale.y)) ; ly >= 0 ; ly -= labelSize * labelFrequency) {
-							g.drawString(String.format("%5d", (int) ((height - ly) / scale.y - padding.y)), 
-									((int) (padding.x * scale.x)) - labelSize * 3, ly + labelSize / 2);
+							double labelValue = (height - ly) / scale.y - padding.y;
+							
+							g.drawString((lyprecise) ? String.format("%3.4f", labelValue) : 
+													   String.format("%5d", (int) labelValue), 
+									((int) (padding.x * scale.x)) - labelSize * 3 - ((lyprecise) ? labelSize : 0), 
+									ly + ((labelValue != 0) ? labelSize / 2 : labelSize));
 						}
 						for (int lx = ((int) (padding.x * scale.x)) + labelSize * labelFrequency ; lx <= width ; lx += labelSize * labelFrequency) {
 							g.drawString("" + ((int) ((lx / scale.x) - padding.x)), 
@@ -109,6 +114,7 @@ public class Graph {
 					g.setColor(Color.black);
 					g.drawLine((int) (padding.x * scale.x), 0, 
 							   (int) (padding.x * scale.x), height);
+					System.out.println(padding.y);
 					g.drawLine(0, (int) (height - padding.y * scale.y), 
 							   width, (int) (height - padding.y * scale.y));
 				}
@@ -200,8 +206,10 @@ public class Graph {
 			padding.setX(defaultPadding / xscale);
 		}
 		if (yscale * padding.y < defaultPadding) {
+			//padding.setY(defaultPadding * yscale);
 			padding.setY(defaultPadding / yscale);
 		}
+		padding.setY(defaultPadding / yscale);
 		for (Point p : points) {
 			p.display();
 		}
