@@ -3,18 +3,19 @@ Version 1.0.0
 Last updated 10/10/2016, 6:15 P.M. PST
 ---
 ##Table of contents
-**[1](#)** Introduction<br>
+###[1](#) Introduction<br>
 [1.1](#11-conventions-used-in-this-document)Conentions used in this document<br>
 [1.2](#12-introduction)Introduction to apcsp<br>
-**[2](#)** Actual syntax<br>
+###[2](#section-2---actual-syntax) Actual syntax<br>
 [2.1](#21-encoding-and-charcter-sets)Encoding and charcter sets<br>
 [2.2](#22-color-seperation)Color Seperation<br>
 [2.3](#23-colors)Colors<br>
 [2.4](#24-comments)Coments<br>
 [2.5](#25-minified-files)Minified Files<br>
-**[3](#)** Examples<br>
+###[3](#section-3---examples) Examples<br>
 [3.1](#31-example-apcsp-file).apcsp example<br>
 [3.2](#32-example-minapcsp-file).min.apcsp example<br>
+
 ---
 ###1.1 Conventions used in this document
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
