@@ -1705,24 +1705,20 @@ public class Window extends JApplet {
 	}
 	/**
 	 * Adds a palette from a .apcsp palette file(same method as addPalette())
-	 * @param filename - the name of the file ending in a .apcsp extension that contains the colors to be included in the palette
-	 * one color per line, each line should look like this: NAME,RED_VALUE,GREEN_VALUE,BLUE_VALUE where RED_VALUE,GREEN_VALUE, and BLUE_VALUE are 
-	 * integers between 0 and 255, inclusive for both
+	 * @param filename - the name of the file ending in a .apcsp extension with content that follows the .apcsp content specification
 	 */
 	public static void addPaletteFromFile(String filename) {
         try {
-        	
+        	String colors = "";
         	Scanner input = new Scanner(new File(filename));
             
 
             while (input.hasNextLine()) {
                 
-                String[] splitted = input.nextLine().split(",");
-
-                Window.addColor(splitted[0], Integer.parseInt(splitted[1]), Integer.parseInt(splitted[2]), Integer.parseInt(splitted[3]));
-                
+                colors += input.nextLine();
             }
             input.close();
+            addPaletteFromString(colors);
 
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -1731,25 +1727,24 @@ public class Window extends JApplet {
 	}
 	/**
 	 * Adds a palette from a String
-	 * @param colors - a string that contains color(s) separated by a semicolon(;). Each color should look like this: NAME,RED_VALUE,GREEN_VALUE,
-	 * BLUE_VALUE where RED_VALUE,GREEN_VALUE, and BLUE_VALUE are integers between 0 and 255, inclusive for both
+	 * @param colors - a string that follows the .apcsp content specification
 	 */
 	public static void addPaletteFromString(String colors) {
+		
+		colors = colors.replaceAll("\\/\\*(\\*(?!\\/)|[^*])*\\*\\/", "");
 		String[] colorList = colors.split(";");
 		
 		for (int i = 0; i < colorList.length; i ++) {
 			
 			String[] splitted = colorList[i].split(",");
-			
-	        Window.addColor(splitted[0], Integer.parseInt(splitted[1]), Integer.parseInt(splitted[2]), Integer.parseInt(splitted[3]));
+	
+	        addColor(splitted[0], Integer.parseInt(splitted[1]), Integer.parseInt(splitted[2]), Integer.parseInt(splitted[3]));
 		}
 		
 	}
 	/**
 	 * Adds a palette from a .apcsp palette file(same method as addPaletteFromFile())
-	 * @param filename - the name of the file ending in a .apcsp extension that contains the colors to be included in the palette
-	 * one color per line, each line should look like this: NAME,RED_VALUE,GREEN_VALUE,BLUE_VALUE where RED_VALUE,GREEN_VALUE, and BLUE_VALUE are 
-	 * integers between 0 and 255, inclusive for both
+	 * @param filename - the name of the file ending in a .apcsp extension that follows the .apcsp content specification
 	 */
 	public static void addPalette(String filename) {
 		addPaletteFromFile(filename);
