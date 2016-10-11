@@ -3,8 +3,8 @@ Version 1.0.0
 Last updated 10/10/2016, 5:17 P.M. PST
 ---
 Table of contents
-[1.1](#1.1)Conentions used in this document
-[2.1](#2.1)Introduction to apcsp
+[1.1](#1.1)Conentions used in this document<br>
+[2.1](#2.1)Introduction to apcsp<br>
 ##1.1 Conventions used in this document
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
 NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and
