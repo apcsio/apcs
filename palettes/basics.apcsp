@@ -1,0 +1,13 @@
+/* 12 Basic Colors */
+black,0,0,0;
+blue,0,0,255;
+brown,139,69,19;
+green,0,128,0;
+light blue,173,216,230;
+orange,255,165,0;
+purple,128,0,128;
+red,255,0,0;
+red orange,255,69,0;
+white,255,255,255;
+yellow,255,255,0;
+yellow green,154,205,50;
