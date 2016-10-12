@@ -10,7 +10,7 @@ Last updated 10/10/2016, 6:15 P.M. PST
 [2.1](#21-encoding-and-charcter-sets)Encoding and charcter sets<br>
 [2.2](#22-color-seperation)Color Seperation<br>
 [2.3](#23-colors)Colors<br>
-[2.4](#24-comments)Coments<br>
+[2.4](#24-comments)Comments<br>
 [2.5](#25-minified-files)Minified Files<br>
 ###[3](#section-3---examples) Examples<br>
 [3.1](#31-example-apcsp-file).apcsp example<br>
